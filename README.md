@@ -1,2 +1,1 @@
-# Spring-Project-Prep
-Spring Boot Project for practice
+# spring-boot-crud-example
