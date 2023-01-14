@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.javatechie</groupId>
-	<artifactId>spring-boot-crud-example-2</artifactId>
+	<artifactId>spring-project-prep</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-crud-example-2</name>
+	<name>spring-project-prep</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "PRODUCT_TBL")
+@Table(name = "turkish_chars")
 public class Product {
 
     @Id
@@ -21,9 +21,5 @@ public class Product {
     private int id;
 
     private String name;
-
-    private int quantity;
-
-    private double price;
     
 }
