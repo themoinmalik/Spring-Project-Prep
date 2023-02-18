@@ -14,10 +14,13 @@ public class SpringProjectPrep {
 //		SpringCar car = context.getBean(SpringCar.class);
 //		System.out.println(car.getEngineName());
 
+//
+//		Vehicle vehicle = context.getBean(Vehicle.class);
+//		vehicle.myVehicle();
 
-		Vehicle vehicle = context.getBean(Vehicle.class);
-		vehicle.myVehicle();
 
+		SpringBike bike = context.getBean(SpringBike.class);
+		System.out.println(bike.getPortNum());
 
 	}
 
