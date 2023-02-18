@@ -8,10 +8,15 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class SpringProjectPrep {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(SpringProjectPrep.class, args);
+		ConfigurableApplicationContext context =
+				SpringApplication.run(SpringProjectPrep.class, args);
 
-		SpringCar car = context.getBean(SpringCar.class);
-		System.out.println(car.getEngineName());
+//		SpringCar car = context.getBean(SpringCar.class);
+//		System.out.println(car.getEngineName());
+
+
+		Vehicle vehicle = context.getBean(Vehicle.class);
+		vehicle.myVehicle();
 
 
 	}
