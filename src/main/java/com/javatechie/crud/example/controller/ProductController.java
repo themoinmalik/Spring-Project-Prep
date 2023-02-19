@@ -34,9 +34,9 @@ public class ProductController {
     }
 
     @GetMapping("/productName/{id}")
-    public String productName(@PathVariable int id){
-        Product product = service.getProductById(id);
-        return product.getName();
+    public String getProductName(@PathVariable int id) {
+        String name =  service.getProductById(id).getName();
+        return  name;
     }
 
     @GetMapping("/product/{name}")
