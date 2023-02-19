@@ -20,7 +20,7 @@ public class SpringProjectPrep {
 
 
 		SpringBike bike = context.getBean(SpringBike.class);
-		System.out.println(bike.getPortNum());
+		System.out.println("application is running -> " + bike.getPortNum());
 
 	}
 
