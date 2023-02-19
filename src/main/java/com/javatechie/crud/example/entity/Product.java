@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "turkish_chars")
+@Table(name = "products")
 public class Product {
 
     @Id
