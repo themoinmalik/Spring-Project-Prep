@@ -4,6 +4,8 @@ import com.javatechie.crud.example.entity.Product;
 import com.javatechie.crud.example.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,7 +23,7 @@ public class ProductService {
         return repository.saveAll(products);
     }
 
-    @Cacheable
+    @Scheduled(fixedDelay = 15000)
     public List<Product> getProducts() {
         return repository.findAll();
     }
