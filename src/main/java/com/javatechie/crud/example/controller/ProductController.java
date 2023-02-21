@@ -2,7 +2,12 @@ package com.javatechie.crud.example.controller;
 
 import com.javatechie.crud.example.entity.Product;
 import com.javatechie.crud.example.service.ProductService;
+import org.hibernate.Hibernate;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.actuate.trace.http.HttpTrace;
+import org.springframework.data.jpa.provider.HibernateUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
