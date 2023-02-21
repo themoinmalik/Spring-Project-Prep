@@ -2,7 +2,10 @@ package com.javatechie.crud.example.service;
 
 import com.javatechie.crud.example.entity.Product;
 import com.javatechie.crud.example.repository.ProductRepository;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.actuate.trace.http.HttpTrace;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -15,7 +18,17 @@ public class ProductService {
     @Autowired
     private ProductRepository repository;
 
+    private SessionFactory sessionFactory;
+
+    public ProductService(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+
     public Product saveProduct(Product product) {
+
+        Session session = sessionFactory.getCurrentSession();
+        System.out.println(session);
+
         return repository.save(product);
     }
 
