@@ -39,6 +39,7 @@ public class ProductController {
     }
 
     @GetMapping("/productName/{id}")
+    @ResponseBody
     public String getProductName(@PathVariable int id) {
         String name =  service.getProductById(id).getName();
         return  name;
